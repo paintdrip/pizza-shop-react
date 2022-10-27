@@ -1,15 +1,28 @@
 import React from "react";
 
 function Categories() {
+  const [activeIndex, setActiveIndex] = React.useState(0);
+
+  const categories = [
+    "Все",
+    "Мясные",
+    "Вегетарианские",
+    "Гриль",
+    "Острые",
+    "Закрытые",
+  ];
+
   return (
     <div className="categories">
       <ul>
-        <li className="active">Все</li>
-        <li>Мясные</li>
-        <li>Вегетарианские</li>
-        <li>Гриль</li>
-        <li>Острые</li>
-        <li>Закрытые</li>
+        {categories.map((value, i) => (
+          <li
+            onClick={() => setActiveIndex(i)}
+            className={activeIndex === i ? "active" : ""}
+          >
+            {value}
+          </li>
+        ))}
       </ul>
     </div>
   );
