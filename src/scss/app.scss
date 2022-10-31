@@ -4,7 +4,8 @@
 @import './components/all';
 
 body {
-  background-color: $background;
+  background: rgb(195,69,34);
+  background: linear-gradient(0deg, rgba(195,69,34,1) 0%, rgba(253,226,45,1) 100%);
 }
 
 .wrapper {
