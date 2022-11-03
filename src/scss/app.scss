@@ -1,11 +1,16 @@
-@import './variables';
-@import './libs/normalize';
+@import "./variables";
+@import "./libs/normalize";
 
-@import './components/all';
+@import "./components/all";
 
 body {
-  background: rgb(252,176,69);
-  background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(255,82,82,1) 50%, rgba(252,176,69,1) 100%);
+  background: rgb(252, 176, 69);
+  background: linear-gradient(
+    90deg,
+    rgba(252, 176, 69, 1) 0%,
+    rgba(255, 82, 82, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
 }
 
 .wrapper {
@@ -15,6 +20,11 @@ body {
   margin: 50px auto;
   border-radius: 10px;
   max-width: 1400px;
+  
+  @media (max-width: 650px) {
+    width: calc(100vw - 30px);
+    margin-top: 20px;
+  }
 }
 
 .content {
@@ -25,15 +35,70 @@ body {
   }
 
   &__items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 11px;
+
+    @media (max-width: 1400px) {
+    grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (max-width: 1055px) {
+    grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 730px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 1295px) {
+      .categories {
+        width: 100%;
+        overflow: auto;
+
+        ul {
+          width: 785px;
+        }
+      }
+
+      .sort {
+        padding-left: 20px;
+        b {
+          display: none
+        }
+      }
+    }
+
+    @media (max-width: 760px) {
+      flex-direction: column-reverse;
+      .categories {
+        ul {
+          li {
+            padding: 8px 20px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 820px) {
+      flex-direction: column-reverse;
+      .categories {
+        margin-top: 30px;
+      }
+
+      .sort {
+        b {
+          display: flex
+        }
+      }
+    }
   }
 }
 
@@ -104,6 +169,10 @@ body {
         color: darken($color: #b6b6b6, $amount: 50);
       }
     }
+  }
+
+  .content__items {
+    display: block;
   }
 
   &__item {
