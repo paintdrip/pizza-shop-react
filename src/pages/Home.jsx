@@ -17,12 +17,13 @@ const Home = ({ searchValue }) => {
   React.useEffect(() => {
     setIsLoading(true);
 
-    const category = categoryId > 0 ? `category=${categoryId}` : "";
     const sortBy = sortType.sortProperty.replace("-", "");
     const order = sortType.sortProperty.includes("-") ? "asc" : "desc";
+    const category = categoryId > 0 ? `category=${categoryId}` : "";
+    const search = searchValue ? `&search=${searchValue}` : "";
 
     fetch(
-      `https://635fe9e43e8f65f283bed842.mockapi.io/pizzas?${category}&sortBy=${sortBy}&order=${order}`
+      `https://635fe9e43e8f65f283bed842.mockapi.io/pizzas?${category}&sortBy=${sortBy}&order=${order}${search}`
     )
       .then((res) => res.json())
       .then((array) => {
@@ -30,16 +31,9 @@ const Home = ({ searchValue }) => {
         setIsLoading(false);
       });
     window.scrollTo(0, 0);
-  }, [categoryId, sortType]);
+  }, [categoryId, sortType, searchValue]);
 
-  const dishes = items
-    .filter((obj) => {
-      if (obj.title.toLowerCase().includes(searchValue.toLowerCase())) {
-        return true;
-      }
-      return false;
-    })
-    .map((obj) => <PizzaBlock key={obj.id} {...obj} />);
+  const dishes = items.map((obj) => <PizzaBlock key={obj.id} {...obj} />);
 
   const skeletons = [...new Array(6)].map((_, index) => (
     <PizzaSkeleton key={index} />
