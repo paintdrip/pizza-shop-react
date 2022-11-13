@@ -71,3 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Components 
 ### React Pagination - https://github.com/AdeleD/react-paginate
+### React Content Loader - https://skeletonreact.com/
