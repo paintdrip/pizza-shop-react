@@ -1,5 +1,7 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { decrement, increment, test } from "./redux/slices/filterSlice";
+import { Routes, Route } from "react-router-dom";
 
 import "./scss/app.scss";
 
@@ -13,9 +15,22 @@ export const SearchContext = React.createContext();
 // Основной файл проекта, хранящий данные передаваемые в root
 function App() {
   const [searchValue, setSearchValue] = React.useState("");
+  const count = useSelector((state) => state.counter.count);
+  const dispatch = useDispatch();
 
   return (
     <div className="wrapper">
+      <button aria-label="Increment value" onClick={() => dispatch(test())}>
+        Increment
+      </button>
+      <span>{count}</span>
+      <button
+        aria-label="Decrement value"
+        onClick={() => dispatch(decrement())}
+      >
+        Decrement
+      </button>
+
       <SearchContext.Provider value={{ searchValue, setSearchValue }}>
         <Header />
         <div className="content">
