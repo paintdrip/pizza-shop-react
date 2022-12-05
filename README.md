@@ -73,3 +73,6 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### React Pagination - https://github.com/AdeleD/react-paginate
 ### React Content Loader - https://skeletonreact.com/
 ### React Router - https://reactrouter.com/en/main
+### Lodash - https://lodash.com/
+### Axios - https://axios-http.com/ru/docs/intro
+### QS - https://www.npmjs.com/package/qs
