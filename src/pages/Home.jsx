@@ -40,20 +40,17 @@ const Home = () => {
 		const category = categoryId > 0 ? `category=${categoryId}` : '';
 		const search = searchValue ? `&search=${searchValue}` : '';
 
-		// axios
-		// 	.get(
-		// 		`https://635fe9e43e8f65f283bed842.mockapi.io/pizzas?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`,
-		// 	)
-		// 	.then((res) => {
-		// 		setItems(res.data);
-		// 		setIsLoading(false);
-		// 	});
-
-		const res = await axios.get(
-			`https://635fe9e43e8f65f283bed842.mockapi.io/pizzas?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`,
-		);
-		setItems(res.data);
-		setIsLoading(false);
+		try {
+			const res = await axios.get(
+				`https://-635fe9e43e8f65f283bed842.mockapi.io/pizzas?page=${currentPage}&limit=4&${category}&sortBy=${sortBy}&order=${order}${search}`,
+			);
+			setItems(res.data);
+			setIsLoading(false);
+		} catch (error) {
+			setIsLoading(false);
+			alert('Произошла ошибка при получении пицц!');
+			console.log('ERROR', error);
+		}
 
 		window.scrollTo(0, 0);
 	};
