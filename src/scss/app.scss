@@ -30,6 +30,22 @@ body {
 .content {
 	padding: 40px 0;
 
+	&__error-info {
+		margin: 90px auto;
+		width: 580px;
+		text-align: center;
+
+		h2 {
+			font-size: 32px;
+			font-weight: 700;
+			margin-bottom: 10px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+
 	&__title {
 		margin: 35px 0;
 	}
