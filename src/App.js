@@ -9,21 +9,19 @@ import Home from './pages/Home';
 import FullPagePizza from './pages/FullPagePizza';
 import NotFound from './pages/NotFound';
 import Cart from './pages/Cart';
+import MainLayout from './layouts/MainLayout';
 
 // Основной файл проекта, хранящий данные передаваемые в root
 function App() {
 	return (
-		<div className='wrapper'>
-			<Header />
-			<div className='content'>
-				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/cart' element={<Cart />} />
-					<Route path='/pizza/:id' element={<FullPagePizza />} />
-					<Route path='*' element={<NotFound />} />
-				</Routes>
-			</div>
-		</div>
+		<Routes>
+			<Route path='/' element={<MainLayout />}>
+				<Route path='' element={<Home />} />
+				<Route path='cart' element={<Cart />} />
+				<Route path='pizza/:id' element={<FullPagePizza />} />
+				<Route path='*' element={<NotFound />} />
+			</Route>
+		</Routes>
 	);
 }
 
