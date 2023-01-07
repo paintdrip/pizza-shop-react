@@ -17,7 +17,7 @@ import PizzaSkeleton from '../components/Skeleton';
 import PizzaBlock from '../components/PizzaBlock';
 import Pagination from '../components/Pagination/Pagination';
 
-const Home = () => {
+const Home: React.FunctionComponent = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 	const isSearch = React.useRef(false);
@@ -26,12 +26,12 @@ const Home = () => {
 	const { categoryId, sort, currentPage, searchValue } = useSelector(selectFilter);
 	const { items, status } = useSelector(selectPizzaData);
 
-	const onChangeCategory = (id) => {
-		dispatch(setCategoryId(id));
+	const onChangeCategory = (idx: number) => {
+		dispatch(setCategoryId(idx));
 	};
 
-	const onChangePage = (number) => {
-		dispatch(setCurrentPage(number));
+	const onChangePage = (page: number) => {
+		dispatch(setCurrentPage(page));
 	};
 
 	const getPizzas = async () => {
@@ -41,6 +41,7 @@ const Home = () => {
 		const search = searchValue ? `&search=${searchValue}` : '';
 
 		dispatch(
+			// @ts-ignore
 			fetchPizzas({
 				sortBy,
 				order,
@@ -91,7 +92,7 @@ const Home = () => {
 		isSearch.current = false;
 	}, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
-	const dishes = items.map((obj) => (
+	const dishes = items.map((obj: any) => (
 		<Link key={obj.id} to={`/pizza/${obj.id}`}>
 			<PizzaBlock {...obj} />
 		</Link>

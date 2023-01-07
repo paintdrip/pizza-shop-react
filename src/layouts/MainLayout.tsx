@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 
 import Header from '../components/Header';
 
-const MainLayout = () => {
+const MainLayout: React.FunctionComponent = () => {
 	return (
 		<div className='wrapper'>
 			<Header />
