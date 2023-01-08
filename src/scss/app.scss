@@ -129,6 +129,12 @@ body {
 			margin: 0;
 		}
 	}
+
+	&--pizz {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+	}
 }
 
 .cart {

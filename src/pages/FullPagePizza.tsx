@@ -7,6 +7,7 @@ const FullPagePizza: React.FunctionComponent = () => {
 		imageUrl: string;
 		title: string;
 		price: number;
+		description: string;
 	}>();
 
 	const { id } = useParams();
@@ -33,10 +34,15 @@ const FullPagePizza: React.FunctionComponent = () => {
 	}
 
 	return (
-		<div className='container'>
-			<img src={pizza.imageUrl} />
-			<h2>{pizza.title}</h2>
-			<h4>{pizza.price} ₽</h4>
+		<div className='container container--pizz'>
+			<div>
+				<img src={pizza.imageUrl} />
+			</div>
+			<div>
+				<h2>{pizza.title}</h2>
+				<h4>{pizza.price} ₽</h4>
+				<h4>{pizza.description}</h4>
+			</div>
 		</div>
 	);
 };
