@@ -12,7 +12,7 @@ const NotFoundBlock: React.FunctionComponent = () => {
 			</h1>
 			<p className={styles.description}>
 				К сожалению данная страница отсутствует в нашем интернет магазине
-			</p>
+			    </p>
 		</div>
 	);
 };
