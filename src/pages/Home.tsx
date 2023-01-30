@@ -2,7 +2,7 @@ import React from 'react';
 
 import qs from 'qs';
 import { useSelector } from 'react-redux';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 import {
   selectFilter,
@@ -94,11 +94,7 @@ const Home: React.FunctionComponent = () => {
     isSearch.current = false;
   }, [categoryId, sort.sortProperty, searchValue, currentPage]);
 
-  const dishes = items.map((obj: any) => (
-    <Link key={obj.id} to={`/pizza/${obj.id}`}>
-      <PizzaBlock {...obj} />
-    </Link>
-  ));
+  const dishes = items.map((obj: any) => <PizzaBlock {...obj} />);
 
   const skeletons = [...new Array(6)].map((_, index) => <PizzaSkeleton key={index} />);
 
