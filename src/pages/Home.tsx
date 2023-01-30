@@ -77,8 +77,8 @@ const Home: React.FunctionComponent = () => {
         setFilters({
           searchValue: params.search,
           categoryId: Number(params.category),
-          currentPage: Number(params.currentPage)
-          sort: sort ? sort : list[]
+          currentPage: Number(params.currentPage),
+          sort: sort || list[0],
         }),
       );
       isSearch.current = true;
