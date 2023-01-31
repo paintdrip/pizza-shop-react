@@ -76,3 +76,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 ### Lodash - https://lodash.com/
 ### Axios - https://axios-http.com/ru/docs/intro
 ### QS - https://www.npmjs.com/package/qs
+### clsx - https://www.npmjs.com/package/clsx
