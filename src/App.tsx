@@ -1,3 +1,4 @@
+import Loadable from 'react-loadable';
 import React, { Suspense } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
@@ -6,7 +7,11 @@ import './scss/app.scss';
 import Home from './pages/Home';
 import MainLayout from './layouts/MainLayout';
 
-const Cart = React.lazy(() => import(/* webpackChunkName: "Cart" */ './pages/Cart'));
+const Cart = Loadable({
+  loader: () => import(/* webpackChunkName: "Cart" */ './pages/Cart'),
+  loading: () => <div>Загрузка корзины...</div>,
+});
+
 const FullPagePizza = React.lazy(
   () => import(/* webpackChunkName: "FullPagePizza" */ './pages/FullPagePizza'),
 );
