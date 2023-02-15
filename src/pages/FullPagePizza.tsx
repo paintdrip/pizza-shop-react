@@ -40,9 +40,9 @@ const FullPagePizza: React.FunctionComponent = () => {
         <img src={pizza.imageUrl} />
       </div>
       <div>
-        <h2>{pizza.title}</h2>
-        <h4>{pizza.price} ₽</h4>
-        <h4>{pizza.description}</h4>
+        <h2 className="textfull">{pizza.title}</h2>
+        <h4 className="textfull">{pizza.price} ₽</h4>
+        <h4 className="textfull">{pizza.description}</h4>
         <Link to="/">
           <button className="button button--outline button--add">
             <span>Назад</span>
