@@ -22,7 +22,7 @@ const FullPagePizza: React.FunctionComponent = () => {
         );
         setPizza(data);
       } catch (error) {
-        alert('Ошибка при получении данных о пицце');
+        alert('Ошибка получения данных о пицце');
         navigate('/');
       }
     }
