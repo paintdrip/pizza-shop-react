@@ -1,81 +1,41 @@
-# Getting Started with Create React App
+# 🍕 Pizza Shop React 🍕
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![preview-1](https://i.ibb.co/rFm6tT5/1.png)
+#### Frontend part of the pizzeria online store. I did this project during a 30 hour React course. While working on the project, I gained skills in working with hooks and components in ReactJS. Make adaptive layout, create pages, sort, search, paginate, filter, popup windows, etc, interact with the server part, send requests to the backend. develop page navigation without reloading. create a global data store for the entire application using the Redux Toolkit, work with LocalStorage to store site settings, optimize component redraws/renders, code splitting
 
-## Available Scripts
+## 🛠 Technological Stack:
+- **ReactJS**
+- **TypeScript**
+- **Redux Toolkit** 
+- **React Router v6** 
+- **Axios + Fetch** 
+- **React Hooks** 
+- **Prettier** 
+- **SCSS**
+- React Content Loader 
+- React Pagination 
+- Lodash.Debounce
+- Code Splitting
 
-In the project directory, you can run:
+#### An example of a shopping cart page filled with products
+![preview-2](https://i.ibb.co/pKy5P7D/Screenshot-4.png)
+#### An example of an empty cart page (displayed if the user has not selected any pizza)
+![preview-3](https://i.ibb.co/cNWCfYW/Screenshot-3.png)
+#### An example of the search on the main page of the site
+![preview-4](https://i.ibb.co/6bTt93F/Screenshot-5.png)
+#### An example of a window with a description of a pizza
+![preview-5](https://i.ibb.co/yp3nGC2/Screenshot-8.png)
+___
+#### To store pizzas in json format, I used the mockAPI service. Requesting data to load using axios and fetch.
+![preview-5](https://i.ibb.co/xMNb48R/232323.png)
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-## Components 
-### React Pagination - https://github.com/AdeleD/react-paginate
-### React Content Loader - https://skeletonreact.com/
-### React Router - https://reactrouter.com/en/main
-### Lodash - https://lodash.com/
-### Axios - https://axios-http.com/ru/docs/intro
-### QS - https://www.npmjs.com/package/qs
-### clsx - https://www.npmjs.com/package/clsx
-### ahooks - https://ahooks.js.org/guide
-### react-loadable - https://www.npmjs.com/package/react-loadable
+## 🗄 Links
+-  React Pagination - https://github.com/AdeleD/react-paginate
+-  React Content Loader - https://skeletonreact.com/
+-  React Router - https://reactrouter.com/en/main
+-  Lodash - https://lodash.com/
+-  Axios - https://axios-http.com/ru/docs/intro
+-  QS - https://www.npmjs.com/package/qs
+-  clsx - https://www.npmjs.com/package/clsx
+-  ahooks - https://ahooks.js.org/guide
+-  react-loadable - https://www.npmjs.com/package/react-loadable
