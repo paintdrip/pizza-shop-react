@@ -39,3 +39,4 @@ ___
 -  clsx - https://www.npmjs.com/package/clsx
 -  ahooks - https://ahooks.js.org/guide
 -  react-loadable - https://www.npmjs.com/package/react-loadable
+-  gh-pages - https://www.npmjs.com/package/gh-pages
